@@ -6,12 +6,12 @@ h1{
 
 h2{
 
-  color:black; font-family:'Allura', cursive; font-size: 30px
+  float: right;
 
 }
 
 body{
-  color:black; font-family:'Shadows Into Light Two', cursive; font-size:20px;
+  color:black;font-family: 'Shadows Into Light Two'; font-size:20px;
 
 
 
@@ -69,7 +69,7 @@ div.figure {
 }
 
 .button {
-    background-color: #716868;
+    background-color: #3498DB;
     border: black;
     color: white;
     padding: 15px 25px;
@@ -79,5 +79,33 @@ div.figure {
 }
 
 .button:hover {
-    background-color: pink;
+    background-color: #2980B9;
+}
+
+
+.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  float: left;
+}
+
+.btn:hover {
+  background-color: #2980B9;
+}
+
+
+#logoutBtn {
+  display: inline-flex !important;
 }
