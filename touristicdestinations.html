@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Touristic Destinations</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="map"> </div>
+</div>
+    <script>
+
+      function initMap() {
+        myLatLng = {lat: 37.785718, lng: -122.401051};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: myLatLng
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">SF MoMA</h1>'+
+            '<div id="bodyContent">'+
+            '<p>San Francisco Museum of Modern Art, also referred to as SF MoMA' +
+            '<p>151 3rd St, San Francisco, CA 94103</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+
+
+        myLatLng1 = {lat: 37.819929, lng: -122.478255};
+        var contentString1 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Golden Gate Bridge</h1>'+
+            '<div id="bodyContent">'+
+            '<p>Golden Gate Bridge, San Francisco, CA' +
+            '</div>'+
+            '</div>';
+
+        var infowindow1 = new google.maps.InfoWindow({
+          content: contentString1
+        });
+        var marker1 = new google.maps.Marker({
+          position: myLatLng1,
+          map: map,
+          title: 'Golden Gate Bridge'
+        });
+          marker1.addListener('click', function() {
+            infowindow1.open(map, marker1);
+            });
+
+
+
+
+
+        myLatLng2 = {lat: 37.78798, lng: -122.407517};
+        var contentString2 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Union Square</h1>'+
+          '<div id="bodyContent">'+
+          '<p>333 Post St, San Francisco, CA 94108' +
+          '</div>'+
+          '</div>';
+
+      var infowindow2 = new google.maps.InfoWindow({
+        content: contentString2
+      });
+      var marker2 = new google.maps.Marker({
+        position: myLatLng2,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+          });
+
+
+      myLatLng3 = {lat: 37.802395, lng: -122.405822};
+      var contentString3 = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Coit Tower</h1>'+
+        '<div id="bodyContent">'+
+        '<p>1 Telegraph Hill Blvd, San Francisco, CA 94133' +
+        '</div>'+
+        '</div>';
+
+    var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+    });
+    var marker3 = new google.maps.Marker({
+      position: myLatLng3,
+      map: map,
+      title: 'Golden Gate Bridge'
+    });
+      marker3.addListener('click', function() {
+        infowindow3.open(map, marker3);
+        });
+
+       myLatLng4 = {lat: 37.808673, lng: -122.404187};
+       var contentString4 = '<div id="content">'+
+         '<div id="siteNotice">'+
+         '</div>'+
+         '<h1 id="firstHeading" class="firstHeading">Pier 39</h1>'+
+         '<div id="bodyContent">'+
+         '<p>Beach St & The Embarcadero, San Francisco, CA 94133' +
+         '</div>'+
+         '</div>';
+
+     var infowindow4 = new google.maps.InfoWindow({
+       content: contentString4
+     });
+     var marker4 = new google.maps.Marker({
+       position: myLatLng4,
+       map: map,
+       title: 'Golden Gate Bridge'
+     });
+       marker4.addListener('click', function() {
+         infowindow4.open(map, marker4);
+         });
+
+
+        myLatLng5 = {lat: 37.806055, lng: -122.404187};
+        var contentString5 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Pier 31</h1>'+
+          '<div id="bodyContent">'+
+          '<p>1398 The Emarcadero, San Francisco, CA 94133' +
+          '</div>'+
+          '</div>';
+
+      var infowindow5 = new google.maps.InfoWindow({
+        content: contentString5
+      });
+      var marker5 = new google.maps.Marker({
+        position: myLatLng5,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker5.addListener('click', function() {
+          infowindow5.open(map, marker5);
+          });
+
+          myLatLng6 = {lat: 37.751595, lng: -122.200546};
+          var contentString6 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Oakland Coliseum </h1>'+
+            '<div id="bodyContent">'+
+            '<p>7000 Coliseum Way, Oakland, CA 94621' +
+            '</div>'+
+            '</div>';
+
+        var infowindow6 = new google.maps.InfoWindow({
+          content: contentString6
+        });
+        var marker6 = new google.maps.Marker({
+          position: myLatLng6,
+          map: map,
+          title: 'Golden Gate Bridge'
+        });
+          marker6.addListener('click', function() {
+            infowindow6.open(map, marker6);
+            });
+
+
+
+        myLatLng7 = {lat: 37.778595, lng: -122.38927};
+        var contentString7 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">AT&T Park</h1>'+
+          '<div id="bodyContent">'+
+          '<p>24 Willie Mays Plaza, San Francisco, CA 94107' +
+          '</div>'+
+          '</div>';
+
+      var infowindow7 = new google.maps.InfoWindow({
+        content: contentString7
+      });
+      var marker7 = new google.maps.Marker({
+        position: myLatLng7,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker7.addListener('click', function() {
+          infowindow7.open(map, marker7);
+      });
+
+
+       myLatLng8 = {lat: 37.750302, lng: -122.202961};
+       var contentString8 = '<div id="content">'+
+         '<div id="siteNotice">'+
+         '</div>'+
+         '<h1 id="firstHeading" class="firstHeading">Oracle Arena</h1>'+
+         '<div id="bodyContent">'+
+         '<p>7000 Coliseum Way, Oakland, CA 94621' +
+         '</div>'+
+         '</div>';
+
+     var infowindow8 = new google.maps.InfoWindow({
+       content: contentString8
+     });
+     var marker8 = new google.maps.Marker({
+       position: myLatLng8,
+       map: map,
+       title: 'Golden Gate Bridge'
+     });
+       marker8.addListener('click', function() {
+         infowindow8.open(map, marker8);
+     });
+
+
+       myLatLng9 = {lat: 37.801542, lng: -122.397484};
+       var contentString9 = '<div id="content">'+
+         '<div id="siteNotice">'+
+         '</div>'+
+         '<h1 id="firstHeading" class="firstHeading">Exploratorium</h1>'+
+         '<div id="bodyContent">'+
+         '<p>Pier 15 The Embarcadero, San Francisco, CA 94111' +
+         '</div>'+
+         '</div>';
+
+     var infowindow9 = new google.maps.InfoWindow({
+       content: contentString9
+     });
+     var marker9 = new google.maps.Marker({
+       position: myLatLng9,
+       map: map,
+       title: 'Golden Gate Bridge'
+     });
+       marker9.addListener('click', function() {
+         infowindow9.open(map, marker9);
+     });
+
+      myLatLng10 = {lat: 37.871899, lng: -122.25854};
+      var contentString10 = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">UC Berkeley</h1>'+
+        '<div id="bodyContent">'+
+        '<p>UC Berkeley, CA ' +
+        '</div>'+
+        '</div>';
+
+    var infowindow10 = new google.maps.InfoWindow({
+      content: contentString10
+    });
+    var marker10 = new google.maps.Marker({
+      position: myLatLng10,
+      map: map,
+      title: 'Golden Gate Bridge'
+    });
+      marker10.addListener('click', function() {
+        infowindow10.open(map, marker10);
+    });
+
+      myLatLng11 = {lat: 37.319901, lng: -121.948339};
+      var contentString11 = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Santana Row</h1>'+
+        '<div id="bodyContent">'+
+        '<p>377 Santana Row, San Jose, CA 95128 ' +
+        '</div>'+
+        '</div>';
+
+    var infowindow11 = new google.maps.InfoWindow({
+      content: contentString11
+    });
+    var marker11 = new google.maps.Marker({
+      position: myLatLng11,
+      map: map,
+      title: 'Golden Gate Bridge'
+    });
+      marker11.addListener('click', function() {
+        infowindow11.open(map, marker11);
+    });
+
+       myLatLng12 = {lat: 37.801239, lng: -122.258299};
+       var contentString12 = '<div id="content">'+
+         '<div id="siteNotice">'+
+         '</div>'+
+         '<h1 id="firstHeading" class="firstHeading">Lake Merritt</h1>'+
+         '<div id="bodyContent">'+
+         '<p>Lake Merritt, Oakland, CA 94610' +
+         '</div>'+
+         '</div>';
+
+     var infowindow12 = new google.maps.InfoWindow({
+       content: contentString12
+     });
+     var marker12 = new google.maps.Marker({
+       position: myLatLng12,
+       map: map,
+       title: 'Golden Gate Bridge'
+     });
+       marker12.addListener('click', function() {
+         infowindow12.open(map, marker12);
+     });
+
+        myLatLng13 = {lat: 37.728399, lng: -122.113566};
+        var contentString13 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Lake Chabot</h1>'+
+          '<div id="bodyContent">'+
+          '<p>17600 Lake Chabot Rd, Castro Valley, CA 94546' +
+          '</div>'+
+          '</div>';
+
+      var infowindow13 = new google.maps.InfoWindow({
+        content: contentString13
+      });
+      var marker13 = new google.maps.Marker({
+        position: myLatLng13,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker13.addListener('click', function() {
+          infowindow13.open(map, marker13);
+      });
+
+        myLatLng14 = {lat: 37.785414, lng: -122.429383};
+        var contentString14 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Japantown</h1>'+
+          '<div id="bodyContent">'+
+          '<p>17600 Japantown, San Francisco, CA 94115' +
+          '</div>'+
+          '</div>';
+
+      var infowindow14 = new google.maps.InfoWindow({
+        content: contentString14
+      });
+      var marker14 = new google.maps.Marker({
+        position: myLatLng14,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker14.addListener('click', function() {
+          infowindow14.open(map, marker14);
+      });
+
+      myLatLng15 = {lat: 37.794138, lng: -122.407791};
+      var contentString15 = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Chinatown</h1>'+
+        '<div id="bodyContent">'+
+        '<p>17600 Chinatown, San Francisco, CA 94108' +
+        '</div>'+
+        '</div>';
+
+    var infowindow15 = new google.maps.InfoWindow({
+      content: contentString15
+    });
+    var marker15 = new google.maps.Marker({
+      position: myLatLng15,
+      map: map,
+      title: 'Golden Gate Bridge'
+    });
+      marker15.addListener('click', function() {
+        infowindow15.open(map, marker15);
+    });
+
+        myLatLng16 = {lat: 37.794665, lng: -122.277178};
+        var contentString16 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Jack London Square</h1>'+
+          '<div id="bodyContent">'+
+          '<p>Broadway, Oakland, CA 94607' +
+          '</div>'+
+          '</div>';
+
+      var infowindow16 = new google.maps.InfoWindow({
+        content: contentString16
+      });
+      var marker16 = new google.maps.Marker({
+        position: myLatLng16,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker16.addListener('click', function() {
+          infowindow16.open(map, marker16);
+      });
+
+        myLatLng17 = {lat: 37.800762, lng: -122.410804};
+        var contentString17 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Little Italy, San Francisco</h1>'+
+          '<div id="bodyContent">'+
+          '<p>Little Italy, San Francisco, CA 94133' +
+          '</div>'+
+          '</div>';
+
+      var infowindow17 = new google.maps.InfoWindow({
+        content: contentString17
+      });
+      var marker17 = new google.maps.Marker({
+        position: myLatLng17,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker17.addListener('click', function() {
+          infowindow17.open(map, marker17);
+      });
+
+        myLatLng18 = {lat: 37.776796, lng: -122.416604};
+        var contentString18 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Twitter Headquarters</h1>'+
+          '<div id="bodyContent">'+
+          '<p>1355 Market Street #900, San Francisco, CA 94103' +
+          '</div>'+
+          '</div>';
+
+      var infowindow18 = new google.maps.InfoWindow({
+        content: contentString18
+      });
+      var marker18 = new google.maps.Marker({
+        position: myLatLng18,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker18.addListener('click', function() {
+          infowindow18.open(map, marker18);
+      });
+
+        myLatLng19 = {lat: 37.790529, lng: -122.399155};
+        var contentString19 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Sephora Headquarters</h1>'+
+          '<div id="bodyContent">'+
+          '<p>525 Market Street, San Francisco, CA 94105' +
+          '</div>'+
+          '</div>';
+
+      var infowindow19 = new google.maps.InfoWindow({
+        content: contentString19
+      });
+      var marker19 = new google.maps.Marker({
+        position: myLatLng19,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker19.addListener('click', function() {
+          infowindow19.open(map, marker19);
+      });
+
+        myLatLng20 = {lat: 37.512437, lng: -121.880513};
+        var contentString20 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Mission Peak</h1>'+
+          '<div id="bodyContent">'+
+          '<p>43600 Mission Blvd, Fremont, CA 94539' +
+          '</div>'+
+          '</div>';
+
+      var infowindow20 = new google.maps.InfoWindow({
+        content: contentString20
+      });
+      var marker20 = new google.maps.Marker({
+        position: myLatLng20,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker20.addListener('click', function() {
+          infowindow20.open(map, marker20);
+      });
+
+        myLatLng21 = {lat: 37.759392, lng: -122.510734};
+        var contentString21 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Ocean Beach</h1>'+
+          '<div id="bodyContent">'+
+          '<p>Fulton Street and Great Hwy, Golden Gate National Recreation Area, San Francisco, CA 94121' +
+          '</div>'+
+          '</div>';
+
+      var infowindow21 = new google.maps.InfoWindow({
+        content: contentString21
+      });
+      var marker21 = new google.maps.Marker({
+        position: myLatLng21,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker21.addListener('click', function() {
+          infowindow21.open(map, marker21);
+      });
+
+        myLatLng22 = {lat: 37.808, lng: -122.417743};
+        var contentString22 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Fishermans Wharf</h1>'+
+          '<div id="bodyContent">'+
+          '<p>505 Beach Street, San Francisco, CA 94133' +
+          '</div>'+
+          '</div>';
+
+      var infowindow22 = new google.maps.InfoWindow({
+        content: contentString22
+      });
+      var marker22 = new google.maps.Marker({
+        position: myLatLng22,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker22.addListener('click', function() {
+          infowindow22.open(map, marker22);
+      });
+
+        myLatLng23 = {lat: 37.770091, lng: -122.470436};
+        var contentString23 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Japanese Tea Garden</h1>'+
+          '<div id="bodyContent">'+
+          '<p>75 Hagiwara Tea Garden Dr, San Francisco, CA 94118' +
+          '</div>'+
+          '</div>';
+
+      var infowindow23 = new google.maps.InfoWindow({
+        content: contentString23
+      });
+      var marker23 = new google.maps.Marker({
+        position: myLatLng23,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker23.addListener('click', function() {
+          infowindow23.open(map, marker23);
+      });
+
+        myLatLng24 = {lat: 37.802958, lng: -122.449193};
+        var contentString24 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Palace of Fine Arts Theatre</h1>'+
+          '<div id="bodyContent">'+
+          '<p>3301 Lyon Street, San Francisco, CA 94123' +
+          '</div>'+
+          '</div>';
+
+      var infowindow24 = new google.maps.InfoWindow({
+        content: contentString24
+      });
+      var marker24 = new google.maps.Marker({
+        position: myLatLng24,
+        map: map,
+        title: 'Golden Gate Bridge'
+      });
+        marker24.addListener('click', function() {
+          infowindow24.open(map, marker24);
+      });
+    }
+
+
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt7JYB33116W_SweYcNtBwtCUeicc3FTs&callback=initMap">
+    </script>
+  </body>
+</html>

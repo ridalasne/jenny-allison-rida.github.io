@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Picture Destinations</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        myLatLng = {lat: 37.885296, lng: -122.262901};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: myLatLng
+        });
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Berkeley Rose Garden</h1>'+
+            '<div id="bodyContent">'+
+            '<p>1200 Euclid Ave, Berkeley, CA 94708</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+
+        myLatLng1 = {lat: 37.820012 , lng: -122.2466};
+        var contentString1 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Morcom Rose Garden</h1>'+
+            '<div id="bodyContent">'+
+            '<p>700 Jean Street, Oakland, CA 94610</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow1 = new google.maps.InfoWindow({
+          content: contentString1
+        });
+
+        var marker1 = new google.maps.Marker({
+          position: myLatLng1,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker1.addListener('click', function() {
+            infowindow1.open(map, marker1);
+        });
+
+        myLatLng2 = {lat: 37.890699, lng: -122.252863};
+        var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Grizzly Peak</h1>'+
+            '<div id="bodyContent">'+
+            '<p>Grizzly Peak Blvd, Berkeley, CA </p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: myLatLng2,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker2.addListener('click', function() {
+            infowindow2.open(map, marker2);
+        });
+
+        myLatLng3 = {lat: 37.785718, lng: -122.401051};
+        var contentString3 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">SF MoMa</h1>'+
+            '<div id="bodyContent">'+
+            '<p>151 3rd Street, San Francisco, CA 94103</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow3 = new google.maps.InfoWindow({
+          content: contentString3
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: myLatLng3,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker3.addListener('click', function() {
+            infowindow3.open(map, marker3);
+        });
+
+        myLatLng4 = {lat: 37.786989, lng: -122.405181};
+        var contentString4 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Museum Of Ice Crean</h1>'+
+            '<div id="bodyContent">'+
+            '<p> 1 Grant Ave, San Francisco, CA 94108</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow4 = new google.maps.InfoWindow({
+          content: contentString4
+        });
+
+        var marker4 = new google.maps.Marker({
+          position: myLatLng4,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker4.addListener('click', function() {
+            infowindow4.open(map, marker4);
+        });
+
+          myLatLng5 = {lat: 37.788816, lng: -122.409747};
+          var contentString5 = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Color Factory</h1>'+
+              '<div id="bodyContent">'+
+              '<p> 575 Sutter Street, San Francisco, CA 94102</p>'+
+              '</div>'+
+              '</div>';
+
+          var infowindow5 = new google.maps.InfoWindow({
+            content: contentString5
+          });
+
+          var marker5 = new google.maps.Marker({
+            position: myLatLng5,
+            map: map,
+            title: 'SF MoMA'
+          });
+            marker5.addListener('click', function() {
+              infowindow5.open(map, marker5);
+        });
+
+        myLatLng6 = {lat: 37.819929, lng: -122.478255};
+        var contentString6 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Golden Gate Bridge</h1>'+
+            '<div id="bodyContent">'+
+            '<p> Golden Gate Bridge, San Francisco, CA </p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow6 = new google.maps.InfoWindow({
+          content: contentString6
+        });
+
+        var marker6 = new google.maps.Marker({
+          position: myLatLng6,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker6.addListener('click', function() {
+            infowindow6.open(map, marker6);
+        });
+        myLatLng7 = {lat: 37.785414, lng: -122.429383};
+        var contentString7 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Japantown</h1>'+
+            '<div id="bodyContent">'+
+            '<p> Japantown, San Francisco, CA 94115 </p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow7 = new google.maps.InfoWindow({
+          content: contentString7
+        });
+
+        var marker7 = new google.maps.Marker({
+          position: myLatLng7,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker7.addListener('click', function() {
+            infowindow7.open(map, marker7);
+        });
+      myLatLng8 = {lat: 37.794138, lng: -122.407791};
+      var contentString8 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Chinatown</h1>'+
+          '<div id="bodyContent">'+
+          '<p> Chinatown, San Francisco, CA </p>'+
+          '</div>'+
+          '</div>';
+
+      var infowindow8 = new google.maps.InfoWindow({
+        content: contentString8
+      });
+
+      var marker8 = new google.maps.Marker({
+        position: myLatLng8,
+        map: map,
+        title: 'SF MoMA'
+      });
+        marker8.addListener('click', function() {
+          infowindow8.open(map, marker8);
+      });
+      myLatLng9 = {lat: 37.78798, lng: -122.407517};
+      var contentString9 = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Union Square</h1>'+
+          '<div id="bodyContent">'+
+          '<p> Union Square, 333 Post St., San Francisco, CA 94108</p>'+
+          '</div>'+
+          '</div>';
+
+      var infowindow9 = new google.maps.InfoWindow({
+        content: contentString9
+      });
+
+      var marker9 = new google.maps.Marker({
+        position: myLatLng9,
+        map: map,
+        title: 'SF MoMA'
+      });
+        marker9.addListener('click', function() {
+          infowindow9.open(map, marker9);
+      });
+
+       myLatLng10 = {lat: 37.785068, lng: -122.406953};
+       var contentString10  = '<div id="content">'+
+           '<div id="siteNotice">'+
+           '</div>'+
+           '<h1 id="firstHeading" class="firstHeading">Westfield Sky Terrace</h1>'+
+           '<div id="bodyContent">'+
+           '<p> 835 Market St., San Francisco, CA 94103</p>'+
+           '</div>'+
+           '</div>';
+
+       var infowindow10 = new google.maps.InfoWindow({
+         content: contentString10
+       });
+
+       var marker10 = new google.maps.Marker({
+         position: myLatLng10,
+         map: map,
+         title: 'SF MoMA'
+       });
+         marker10.addListener('click', function() {
+           infowindow10.open(map, marker10);
+       });
+       myLatLng11 = {lat: 37.793707, lng: -122.401685};
+       var contentString11  = '<div id="content">'+
+           '<div id="siteNotice">'+
+           '</div>'+
+           '<h1 id="firstHeading" class="firstHeading">343 Sansome St.</h1>'+
+           '<div id="bodyContent">'+
+           '<p> 343 Sansome St., San Francisco, CA 94104</p>'+
+           '</div>'+
+           '</div>';
+
+       var infowindow11 = new google.maps.InfoWindow({
+         content: contentString11
+       });
+
+       var marker11 = new google.maps.Marker({
+         position: myLatLng11,
+         map: map,
+         title: 'SF MoMA'
+       });
+         marker11.addListener('click', function() {
+           infowindow11.open(map, marker11);
+       });
+       myLatLng12 = {lat: 37.759392, lng: -122.510734};
+       var contentString12  = '<div id="content">'+
+           '<div id="siteNotice">'+
+           '</div>'+
+           '<h1 id="firstHeading" class="firstHeading">Ocean Beach</h1>'+
+           '<div id="bodyContent">'+
+           '<p> Ocean Beach, San Francisco, CA</p>'+
+           '</div>'+
+           '</div>';
+
+       var infowindow12 = new google.maps.InfoWindow({
+         content: contentString12
+       });
+
+       var marker12 = new google.maps.Marker({
+         position: myLatLng12,
+         map: map,
+         title: 'SF MoMA'
+       });
+         marker12.addListener('click', function() {
+           infowindow12.open(map, marker12);
+       });
+       myLatLng13 = {lat: 37.770091, lng: -122.470436};
+       var contentString13  = '<div id="content">'+
+           '<div id="siteNotice">'+
+           '</div>'+
+           '<h1 id="firstHeading" class="firstHeading">Japanese Tea Garden</h1>'+
+           '<div id="bodyContent">'+
+           '<p> 75 Hagiwara Tea Garden Dr, San Francisco, CA 94118</p>'+
+           '</div>'+
+           '</div>';
+
+       var infowindow13 = new google.maps.InfoWindow({
+         content: contentString13
+       });
+
+       var marker13 = new google.maps.Marker({
+         position: myLatLng13,
+         map: map,
+         title: 'SF MoMA'
+       });
+         marker13.addListener('click', function() {
+           infowindow13.open(map, marker13);
+       });
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt7JYB33116W_SweYcNtBwtCUeicc3FTs&callback=initMap">
+    </script>
+  </body>
+</html>
