@@ -1,3 +1,5 @@
+
+
 h1{
   color:black; font-family:'Allura', cursive; font-size: 42px
 
@@ -11,11 +13,14 @@ h2{
 }
 
 body{
-  color:black;font-family: 'Shadows Into Light Two'; font-size:20px;
-
-
-
+  color:black;
+  font-family: 'Shadows Into Light Two';
+  font-size:20px;
 }
+
+
+
+
 .circle {
     height: 150;
     border-radius: 50%;
@@ -48,6 +53,7 @@ div.figure {
 
 .zoom:hover {
     transform: scale(1.5);
+
 }
 
 .row {
@@ -108,4 +114,39 @@ div.figure {
 
 #logoutBtn {
   display: inline-flex !important;
+}
+
+
+.image{
+ opacity: 1;
+ display: block;
+ width: 300;
+ height: 400;
+ transition: .5s ease;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.8;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }

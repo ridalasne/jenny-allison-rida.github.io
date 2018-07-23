@@ -56,6 +56,18 @@ def register():
 def aboutUs():
         return render_template('aboutus.html')
 
+@app.route("/photoloc")
+def photoloc():
+    return render_template('picturelocations.html')
+
+@app.route("/foodloc")
+def foodloc():
+    return render_template('foodlocations.html')
+
+@app.route("/touristicloc")
+def touristicloc():
+    return render_template('touristicdestinations.html')
+
 @app.route("/createUser", methods=['POST'])
 def createUser():
 
@@ -76,6 +88,8 @@ def createUser():
         usersFile.close()
 
     return home()
+
+
 
 if __name__ == "__main__":
     app.secret_key = os.urandom(12)

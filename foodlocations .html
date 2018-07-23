@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Food Destinations</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        myLatLng = {lat: 37.760017, lng: -122.421109};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: myLatLng
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Bobaguys</h1>'+
+            '<div id="bodyContent">'+
+            '<p>3491 19th Street, San Francisco, CA 94110</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+
+
+
+        myLatLng1 = {lat: 37.807546, lng: -122.268687};
+        var contentString1 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Sweet Belly</h1>'+
+            '<div id="bodyContent">'+
+            '<p>435 19th Street, Oakland, CA 94612</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow1 = new google.maps.InfoWindow({
+          content: contentString1
+        });
+
+        var marker1 = new google.maps.Marker({
+          position: myLatLng1,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker1.addListener('click', function() {
+            infowindow1.open(map, marker1);
+          });
+
+
+        myLatLng2 = {lat: 37.815523, lng: -122.267621};
+        var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Gogi Time</h1>'+
+            '<div id="bodyContent">'+
+            '<p>2600 Telegraph Ave, Oakland, CA 94612</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: myLatLng2,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker2.addListener('click', function() {
+            infowindow2.open(map, marker2);
+
+        });
+
+        myLatLng3 = {lat: 37.784946, lng: -122.237974};
+        var contentString3 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Taqueria Sinaloa</h1>'+
+            '<div id="bodyContent">'+
+            '<p>2138 International Blvd, Oakland, CA 94606</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow3 = new google.maps.InfoWindow({
+          content: contentString3
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: myLatLng3,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker3.addListener('click', function() {
+            infowindow3.open(map, marker3);
+        });
+
+        myLatLng4 = {lat: 37.700237, lng: -121.90761};
+        var contentString4 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">In N Out</h1>'+
+            '<div id="bodyContent">'+
+            '<p>6015 Johnson Dr, Pleasanton, CA 94588</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow4 = new google.maps.InfoWindow({
+          content: contentString4
+        });
+
+        var marker4 = new google.maps.Marker({
+          position: myLatLng4,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker4.addListener('click', function() {
+            infowindow4.open(map, marker4);
+        });
+
+        myLatLng5 = {lat: 37.867857, lng: -122.25738};
+        var contentString5 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Top Dog</h1>'+
+            '<div id="bodyContent">'+
+            '<p>2534 Durant Ave, Berkeley, CA 94704</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow5 = new google.maps.InfoWindow({
+          content: contentString5
+        });
+
+        var marker5 = new google.maps.Marker({
+          position: myLatLng5,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker5.addListener('click', function() {
+            infowindow5.open(map, marker5);
+        });
+
+          myLatLng6 = {lat: 37.870929, lng: -122.268559};
+          var contentString6 = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Happy Lemon</h1>'+
+              '<div id="bodyContent">'+
+              '<p>2106 Shattuck Ave, Berkeley, CA 94704</p>'+
+              '</div>'+
+              '</div>';
+
+          var infowindow6 = new google.maps.InfoWindow({
+            content: contentString6
+          });
+
+          var marker6 = new google.maps.Marker({
+            position: myLatLng6,
+            map: map,
+            title: 'SF MoMA'
+          });
+            marker6.addListener('click', function() {
+              infowindow6.open(map, marker6);
+        });
+
+        myLatLng7 = {lat: 37.705027, lng: -121.851505};
+        var contentString7 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">O Honey</h1>'+
+            '<div id="bodyContent">'+
+            '<p>3862 Fallon Rd, Dublin, CA 94568</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow7 = new google.maps.InfoWindow({
+          content: contentString7
+        });
+
+        var marker7 = new google.maps.Marker({
+          position: myLatLng7,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker7.addListener('click', function() {
+            infowindow7.open(map, marker7);
+        });
+        myLatLng8 = {lat: 37.65806, lng: -121.905087};
+        var contentString8 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Meadowlark Dairy</h1>'+
+            '<div id="bodyContent">'+
+            '<p>57 W, Neal Street, Pleasanton, CA 94566</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow8 = new google.maps.InfoWindow({
+          content: contentString8
+        });
+
+        var marker8 = new google.maps.Marker({
+          position: myLatLng8,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker8.addListener('click', function() {
+            infowindow8.open(map, marker8);
+        });
+        myLatLng9 = {lat: 37.782623, lng: -122.391317};
+        var contentString9 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Steep Creamery and Tea</h1>'+
+            '<div id="bodyContent">'+
+            '<p>270 Brannan Street, San Francisco, CA 94107</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow9 = new google.maps.InfoWindow({
+          content: contentString9
+        });
+
+        var marker9 = new google.maps.Marker({
+          position: myLatLng9,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker9.addListener('click', function() {
+            infowindow9.open(map, marker9);
+        });
+        myLatLng10 = {lat: 37.863826, lng: -122.258339};
+        var contentString10 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uji Time</h1>'+
+            '<div id="bodyContent">'+
+            '<p>2575 Telegraph Ave, Berkeley, CA 94704</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow10 = new google.maps.InfoWindow({
+          content: contentString10
+        });
+
+        var marker10 = new google.maps.Marker({
+          position: myLatLng10,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker10.addListener('click', function() {
+            infowindow10.open(map, marker10);
+        });
+        myLatLng11 = {lat: 37.784891, lng: -122.403457};
+        var contentString11 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Lemonade</h1>'+
+            '<div id="bodyContent">'+
+            '<p>781 Mission Street, San Francisco, CA 94103</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow11 = new google.maps.InfoWindow({
+          content: contentString11
+        });
+
+        var marker11 = new google.maps.Marker({
+          position: myLatLng11,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker11.addListener('click', function() {
+            infowindow11.open(map, marker11);
+        });
+        myLatLng12 = {lat: 37.809266, lng: -122.268352};
+        var contentString12 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Tierra Mia Coffee</h1>'+
+            '<div id="bodyContent">'+
+            '<p>2001 Broadway, Oakland, CA 94612</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow12 = new google.maps.InfoWindow({
+          content: contentString12
+        });
+
+        var marker12 = new google.maps.Marker({
+          position: myLatLng12,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker12.addListener('click', function() {
+            infowindow12.open(map, marker12);
+        });
+        myLatLng13 = {lat: 37.503182, lng: -121.975211};
+        var contentString13 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Gen Korean BBQ</h1>'+
+            '<div id="bodyContent">'+
+            '<p>43476 Boscell Rd, Ste M6-B, Fremont,CA 94538</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow13 = new google.maps.InfoWindow({
+          content: contentString13
+        });
+
+        var marker13 = new google.maps.Marker({
+          position: myLatLng13,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker13.addListener('click', function() {
+            infowindow13.open(map, marker13);
+        });
+        myLatLng14 = {lat: 37.758682, lng: -122.420442};
+        var contentString14 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Garden Creamery</h1>'+
+            '<div id="bodyContent">'+
+            '<p>3566 20th Street, San Francisco, CA 94110</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow14 = new google.maps.InfoWindow({
+          content: contentString14
+        });
+
+        var marker14 = new google.maps.Marker({
+          position: myLatLng14,
+          map: map,
+          title: 'SF MoMA'
+        });
+          marker14.addListener('click', function() {
+            infowindow14.open(map, marker14);
+        });
+
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt7JYB33116W_SweYcNtBwtCUeicc3FTs&callback=initMap">
+    </script>
+  </body>
+</html>

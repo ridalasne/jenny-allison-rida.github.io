@@ -1,92 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="static/stylesheets/basicpage.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/basicpage.css">
     <link href="https://fonts.googleapis.com/css?family=Allura|Dancing+Script|Sacramento|Shadows+Into+Light+Two" rel="stylesheet">
-    <style>
-body {
-  margin: 0;
-  font-size: 28px;
-}
 
-.header {
-  background-color:#14407C;
-  padding: 30px;
-  text-align: center;
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 25px;
-}
-
-#navbar a:hover {
-  background-color: #14407C;
-  color: white;
-}
-
-#navbar a.active {
-  background-color: #2563B7;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-</style>
   </head>
 
   <body>
+
     <br>
+    <img src ="https://i.pinimg.com/564x/b9/66/9f/b9669f92b8d84a527b078d74eb5b38f6.jpg" alt="JAR logo" height="100" width="200" align=left>
+     <br>
+    <h1>
 
-<div id="navbar">
-  <a class="active" href="/homepage">Home</a>
-  <a href="/foodloc">Food Map</a>
-  <a href="/touristicloc">Touristic Destinations Map</a>
-  <a href="/photoloc">Picture Locations Map</a>
-  <a href="/aboutUS">About Us</a>
-  <a href="/logout">Logout</a>
-  <a href="javascript:void(0)">Profile</a>
-</div>
+      <div align=left>
 
-<div class="content">
+      <form id="logoutBtn" action="/photoloc">
+        <input type="submit" value="Photo Map" class="button">
+      </form>
+      <form id="logoutBtn" action="/foodloc">
+        <input type="submit" value="Food Map" class="button">
+      </form>
+        <form id="logoutBtn" action="/touristicloc">
+          <input type="submit" value="Tourist Map" class="button">
+        </form>
+       <form id="logoutBtn" action="/logout">
+           <input type="submit" value="Logout" class="button">
+        </form>
+      </div>
 
-<script>
-window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
-    <center>  <img src ="https://i.pinimg.com/564x/b9/66/9f/b9669f92b8d84a527b078d74eb5b38f6.jpg" alt="JAR logo" style="width:15%" </center>
+
+    </h1>
 
    <p> Greetings and welcome to our wesbite! Our website will basically be your guide to everything Bay Area including touristic
      destinations, locations to take pictures, and amazing places to eat.</p>
@@ -98,49 +44,81 @@ function myFunction() {
    				<div class="column">
 
 
-            <div class ="zoom">
-            <img src="https://brinkleyglenn.files.wordpress.com/2014/03/img_9278.jpg" width=400 height= 300>
+            <div class ="zoom"> <div class="container">
+            <img src="https://brinkleyglenn.files.wordpress.com/2014/03/img_9278.jpg" width=400 height= 300 class="image">
+            <div class="middle">
+               <div class="text">ALLISON!</div>
             </div>
+          </div></div>
 
-            <div class = "zoom">
-            <img src = "https://s3-media1.fl.yelpcdn.com/bphoto/HQAQ8g9gSx4RH7Wz6UZeHQ/348s.jpg" width=400 height=400>
-            </div>
+          <div class ="zoom"> <div class="container">
+          <img src="https://s3-media1.fl.yelpcdn.com/bphoto/HQAQ8g9gSx4RH7Wz6UZeHQ/348s.jpg" width=400 height= 300 class="image">
+          <div class="middle">
+             <div class="text">ALLISON!</div>
+          </div>
+        </div></div>
 
-            <div class = "zoom">
-            <img src = "https://s3-media1.fl.yelpcdn.com/bphoto/U_zUyJ8wcggxrAGhnVYkVg/ls.jpg" width=400 height=400>
-            </div>
+
+
+        <div class ="zoom"> <div class="container">
+        <img src="https://s3-media1.fl.yelpcdn.com/bphoto/U_zUyJ8wcggxrAGhnVYkVg/ls.jpg" width=400 height= 300 class="image">
+        <div class="middle">
+           <div class="text">ALLISON!</div>
+        </div>
+      </div></div>
+
 
           </div class="column">
 
           <div class="column">
 
-            <div class ="zoom">
-            <img src="https://lishcreative.com/wp-content/uploads/2017/07/MB2B8608.jpg" width=400 height=400>
+            <div class ="zoom"> <div class="container">
+            <img src="https://lishcreative.com/wp-content/uploads/2017/07/MB2B8608.jpg" width=400 height= 300 class="image">
+            <div class="middle">
+               <div class="text">ALLISON!</div>
             </div>
+          </div></div>
 
-            <div class = "zoom">
-            <img src = "http://previews.123rf.com/images/touchstone/touchstone1007/touchstone100700024/7368361-The-Japanese-Tea-Garden-in-the-Golden-Gate-Park-San-Francisco--Stock-Photo.jpg" width=400 height=300>
-            </div>
+          <div class ="zoom"> <div class="container">
+          <img src="http://previews.123rf.com/images/touchstone/touchstone1007/touchstone100700024/7368361-The-Japanese-Tea-Garden-in-the-Golden-Gate-Park-San-Francisco--Stock-Photo.jpg" width=400 height= 300 class="image">
+          <div class="middle">
+             <div class="text">ALLISON!</div>
+          </div>
+        </div></div>
 
-            <div class = "zoom">
-            <img src = "https://news.theregistrysf.com/wp-content/uploads/2017/11/Union-Square-Day-Shot.jpg" width=400 height=300>
-            </div>
+        <div class ="zoom"> <div class="container">
+        <img src="https://news.theregistrysf.com/wp-content/uploads/2017/11/Union-Square-Day-Shot.jpg" width=400 height= 300 class="image">
+        <div class="middle">
+           <div class="text">ALLISON!</div>
+        </div>
+      </div></div>
 
           </div class="column">
 
           <div class="column">
 
-            <div class ="zoom">
-            <img src="https://78.media.tumblr.com/8c30dbfc33dc64bafc763d27dead977b/tumblr_otzzjv3lwg1u8rmt8o1_500.jpg" width=300 height=400>
+            <div class ="zoom"> <div class="container">
+            <img src="https://78.media.tumblr.com/8c30dbfc33dc64bafc763d27dead977b/tumblr_otzzjv3lwg1u8rmt8o1_500.jpg" width=400 height= 300 class="image">
+            <div class="middle">
+               <div class="text">ALLISON!</div>
             </div>
+          </div></div>
 
-            <div class = "zoom">
-            <img src = "https://cafecollector.files.wordpress.com/2015/09/img_4649.jpg" width=400 height=300>
-            </div>
 
-            <div class = "zoom">
-            <img src = "https://ssl.c.photoshelter.com/img-get2/I0000Hzcr7fyPBtU/fit=1000x750/Rajs-090826-1861LRDEVSRGB17LSL2-Editsrgb.jpg" width=400 height=00>
-            </div>
+          <div class ="zoom"> <div class="container">
+          <img src="https://cafecollector.files.wordpress.com/2015/09/img_4649.jpg" width=400 height= 300 class="image">
+          <div class="middle">
+             <div class="text">ALLISON!</div>
+          </div>
+        </div></div>
+
+        <div class ="zoom"> <div class="container">
+        <img src="https://ssl.c.photoshelter.com/img-get2/I0000Hzcr7fyPBtU/fit=1000x750/Rajs-090826-1861LRDEVSRGB17LSL2-Editsrgb.jpg" width=400 height= 300 class="image">
+        <div class="middle">
+           <div class="text">ALLISON!</div>
+        </div>
+      </div></div>
+
 
           </div class="column">
 

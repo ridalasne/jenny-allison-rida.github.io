@@ -7,12 +7,13 @@ box-sizing: border-box;
 }
 body {
 	font-family: Arial;
-	background-color: green;
+  background-image: url("https://cdn.wallpapersafari.com/46/28/cO4TVe.jpg");
+	background-size: cover;
 	padding: 50px;
 }
 
 h1{
-	color: orange;
+	color: #14407C;
 	font-family: Arial;
 	text-align: center;
 }
