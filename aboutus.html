@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="finalproject.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="static/stylesheets/finalproject.css">
     <link href="https://fonts.googleapis.com/css?family=Allura|Dancing+Script|Sacramento|Shadows+Into+Light+Two" rel="stylesheet">
+  <style>
+  body {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .header {
+    background-color:#14407C;
+    padding: 30px;
+    text-align: center;
+  }
+
+  #navbar {
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  #navbar a:hover {
+    background-color: #14407C;
+    color: white;
+  }
+
+  #navbar a.active {
+    background-color: #2563B7;
+    color: white;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  </style>
 
   </head>
 
   <body>
+    <div id="navbar">
+      <a class="active" href="/homepage">Home</a>
+      <a href="/foodloc">Food Map</a>
+      <a href="/touristicloc">Touristic Destinations Map</a>
+      <a href="/photoloc">Picture Locations Map</a>
+      <a href="/aboutUS">About Us</a>
+      <a href="/logout">Logout</a>
+      <a href="javascript:void(0)">Profile</a>
+    </div>
+
+    <div class="content">
+
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
     <center><h1> ABOUT US </center></h1>
     <p> Ah, you've found our "About Us" page. We hope you've been enjoying your journey
       navigating through our website and the topics we offered. Here in this section, you will
@@ -14,17 +94,18 @@
         </p>
 
 
-  <center> <!--<div class="row">
+  <center> <div class="row">
   <div class="column">
-    <img src="jennywu.jpg" alt="Jenny" style="width:100%">
+    <img src="static/img/jennywu.jpg" alt="Jenny" style="width:100%">
+
   </div>
   <div class="column">
-    <img src="alleysun.jpg" alt="Allison" style="width:75%">
+    <img src="static/img/alleysun.jpg" alt="Allison" style="width:75%">
   </div>
   <div class="column">
-    <img src="ridalasne.jpg" alt="Rida" style="width:75%">
+    <img src="static/img/ridalasne.jpg" alt="Rida" style="width:75%">
   </div>
-</div> -->
+</div>
 
 <img src"https://upload.wikimedia.org/wikipedia/en/7/7d/Minions_characters.png">
 

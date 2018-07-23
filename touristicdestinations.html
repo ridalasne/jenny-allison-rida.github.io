@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Touristic Destinations</title>
@@ -11,12 +12,60 @@
         height: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
-      html, body {
+        html,body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
+      body {
+        margin: 0;
+        font-size: 28px;
+      }
 
+      .header {
+        background-color:#14407C;
+        padding: 30px;
+        text-align: center;
+      }
+
+      #navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      #navbar a:hover {
+        background-color: #14407C;
+        color: white;
+      }
+
+      #navbar a.active {
+        background-color: #2563B7;
+        color: white;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky + .content {
+        padding-top: 60px;
+      }
     </style>
   </head>
   <body>
@@ -594,9 +643,38 @@
       });
     }
 
-
-
     </script>
+
+
+    <div id="navbar">
+      <a class="active" href="/homepage">Home</a>
+      <a href="/foodloc">Food Map</a>
+      <a href="/touristicloc">Touristic Destinations Map</a>
+      <a href="/photoloc">Picture Locations Map</a>
+      <a href="/aboutUS">About Us</a>
+      <a href="/logout">Logout</a>
+      <a href="javascript:void(0)">Profile</a>
+    </div>
+
+    <div class="content">
+
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt7JYB33116W_SweYcNtBwtCUeicc3FTs&callback=initMap">
     </script>

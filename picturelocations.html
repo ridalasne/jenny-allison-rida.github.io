@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Picture Destinations</title>
@@ -16,20 +17,67 @@
         margin: 0;
         padding: 0;
       }
-    </style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color:#14407C;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#navbar a:hover {
+  background-color: #14407C;
+  color: white;
+}
+
+#navbar a.active {
+  background-color: #2563B7;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
   </head>
   <body>
+
     <div id="map"></div>
     <script>
-
       function initMap() {
         myLatLng = {lat: 37.885296, lng: -122.262901};
-
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 9,
           center: myLatLng
         });
-
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -38,11 +86,9 @@
             '<p>1200 Euclid Ave, Berkeley, CA 94708</p>'+
             '</div>'+
             '</div>';
-
         var infowindow = new google.maps.InfoWindow({
           content: contentString
         });
-
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
@@ -51,7 +97,6 @@
           marker.addListener('click', function() {
             infowindow.open(map, marker);
           });
-
         myLatLng1 = {lat: 37.820012 , lng: -122.2466};
         var contentString1 = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -61,11 +106,9 @@
             '<p>700 Jean Street, Oakland, CA 94610</p>'+
             '</div>'+
             '</div>';
-
         var infowindow1 = new google.maps.InfoWindow({
           content: contentString1
         });
-
         var marker1 = new google.maps.Marker({
           position: myLatLng1,
           map: map,
@@ -74,7 +117,6 @@
           marker1.addListener('click', function() {
             infowindow1.open(map, marker1);
         });
-
         myLatLng2 = {lat: 37.890699, lng: -122.252863};
         var contentString2 = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -84,11 +126,9 @@
             '<p>Grizzly Peak Blvd, Berkeley, CA </p>'+
             '</div>'+
             '</div>';
-
         var infowindow2 = new google.maps.InfoWindow({
           content: contentString2
         });
-
         var marker2 = new google.maps.Marker({
           position: myLatLng2,
           map: map,
@@ -97,7 +137,6 @@
           marker2.addListener('click', function() {
             infowindow2.open(map, marker2);
         });
-
         myLatLng3 = {lat: 37.785718, lng: -122.401051};
         var contentString3 = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -107,11 +146,9 @@
             '<p>151 3rd Street, San Francisco, CA 94103</p>'+
             '</div>'+
             '</div>';
-
         var infowindow3 = new google.maps.InfoWindow({
           content: contentString3
         });
-
         var marker3 = new google.maps.Marker({
           position: myLatLng3,
           map: map,
@@ -120,7 +157,6 @@
           marker3.addListener('click', function() {
             infowindow3.open(map, marker3);
         });
-
         myLatLng4 = {lat: 37.786989, lng: -122.405181};
         var contentString4 = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -130,11 +166,9 @@
             '<p> 1 Grant Ave, San Francisco, CA 94108</p>'+
             '</div>'+
             '</div>';
-
         var infowindow4 = new google.maps.InfoWindow({
           content: contentString4
         });
-
         var marker4 = new google.maps.Marker({
           position: myLatLng4,
           map: map,
@@ -143,7 +177,6 @@
           marker4.addListener('click', function() {
             infowindow4.open(map, marker4);
         });
-
           myLatLng5 = {lat: 37.788816, lng: -122.409747};
           var contentString5 = '<div id="content">'+
               '<div id="siteNotice">'+
@@ -153,11 +186,9 @@
               '<p> 575 Sutter Street, San Francisco, CA 94102</p>'+
               '</div>'+
               '</div>';
-
           var infowindow5 = new google.maps.InfoWindow({
             content: contentString5
           });
-
           var marker5 = new google.maps.Marker({
             position: myLatLng5,
             map: map,
@@ -166,7 +197,6 @@
             marker5.addListener('click', function() {
               infowindow5.open(map, marker5);
         });
-
         myLatLng6 = {lat: 37.819929, lng: -122.478255};
         var contentString6 = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -176,11 +206,9 @@
             '<p> Golden Gate Bridge, San Francisco, CA </p>'+
             '</div>'+
             '</div>';
-
         var infowindow6 = new google.maps.InfoWindow({
           content: contentString6
         });
-
         var marker6 = new google.maps.Marker({
           position: myLatLng6,
           map: map,
@@ -198,11 +226,9 @@
             '<p> Japantown, San Francisco, CA 94115 </p>'+
             '</div>'+
             '</div>';
-
         var infowindow7 = new google.maps.InfoWindow({
           content: contentString7
         });
-
         var marker7 = new google.maps.Marker({
           position: myLatLng7,
           map: map,
@@ -220,11 +246,9 @@
           '<p> Chinatown, San Francisco, CA </p>'+
           '</div>'+
           '</div>';
-
       var infowindow8 = new google.maps.InfoWindow({
         content: contentString8
       });
-
       var marker8 = new google.maps.Marker({
         position: myLatLng8,
         map: map,
@@ -242,11 +266,9 @@
           '<p> Union Square, 333 Post St., San Francisco, CA 94108</p>'+
           '</div>'+
           '</div>';
-
       var infowindow9 = new google.maps.InfoWindow({
         content: contentString9
       });
-
       var marker9 = new google.maps.Marker({
         position: myLatLng9,
         map: map,
@@ -255,7 +277,6 @@
         marker9.addListener('click', function() {
           infowindow9.open(map, marker9);
       });
-
        myLatLng10 = {lat: 37.785068, lng: -122.406953};
        var contentString10  = '<div id="content">'+
            '<div id="siteNotice">'+
@@ -265,11 +286,9 @@
            '<p> 835 Market St., San Francisco, CA 94103</p>'+
            '</div>'+
            '</div>';
-
        var infowindow10 = new google.maps.InfoWindow({
          content: contentString10
        });
-
        var marker10 = new google.maps.Marker({
          position: myLatLng10,
          map: map,
@@ -287,11 +306,9 @@
            '<p> 343 Sansome St., San Francisco, CA 94104</p>'+
            '</div>'+
            '</div>';
-
        var infowindow11 = new google.maps.InfoWindow({
          content: contentString11
        });
-
        var marker11 = new google.maps.Marker({
          position: myLatLng11,
          map: map,
@@ -309,11 +326,9 @@
            '<p> Ocean Beach, San Francisco, CA</p>'+
            '</div>'+
            '</div>';
-
        var infowindow12 = new google.maps.InfoWindow({
          content: contentString12
        });
-
        var marker12 = new google.maps.Marker({
          position: myLatLng12,
          map: map,
@@ -331,11 +346,9 @@
            '<p> 75 Hagiwara Tea Garden Dr, San Francisco, CA 94118</p>'+
            '</div>'+
            '</div>';
-
        var infowindow13 = new google.maps.InfoWindow({
          content: contentString13
        });
-
        var marker13 = new google.maps.Marker({
          position: myLatLng13,
          map: map,
@@ -344,9 +357,38 @@
          marker13.addListener('click', function() {
            infowindow13.open(map, marker13);
        });
-
       }
     </script>
+
+      <div id="navbar">
+        <a class="active" href="/homepage">Home</a>
+        <a href="/foodloc">Food Map</a>
+        <a href="/touristicloc">Touristic Destinations Map</a>
+        <a href="/photoloc">Picture Locations Map</a>
+        <a href="/aboutUS">About Us</a>
+        <a href="/logout">Logout</a>
+        <a href="javascript:void(0)">Profile</a>
+      </div>
+
+      <div class="content">
+
+
+      <script>
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>
+
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt7JYB33116W_SweYcNtBwtCUeicc3FTs&callback=initMap">
     </script>
