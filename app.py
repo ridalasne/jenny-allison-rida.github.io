@@ -2,6 +2,7 @@ from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 import json
+import base64
 
 app = Flask(__name__)
 
@@ -20,16 +21,17 @@ def do_admin_login():
     users = json.load(usersFile)
     usersFile.close()
 
+    print("username " + str(request.form))
+
     POST_USERNAME = str(request.form['username'])
     POST_PASSWORD = str(request.form['password'])
 
-    '''
-    if POST_PASSWORD == users[POST_USERNAME]["password"]:
-        session['logged_in'] = True '''
 
     if users[POST_USERNAME]["password"] == POST_PASSWORD:
         session["username"] = POST_USERNAME;
         session['logged_in'] = True
+        session["favorites"] = users[session["username"]]['favorites']
+
     else:
         flash('wrong password!')
 
@@ -68,6 +70,33 @@ def foodloc():
 def touristicloc():
     return render_template('touristicdestinations.html')
 
+
+@app.route("/favorite", methods=["POST"])
+def favorite():
+    usersFile = open("users.json","r")
+    users = json.load(usersFile)
+    usersFile.close()
+
+    print ('image name' + str(request.form))
+
+    POST_IMAGE = str(request.form['imagename'])
+
+    if POST_IMAGE in users[session["username"]]['favorites']:
+        flash("You already saved this image!")
+    else:
+        users[session["username"]]['favorites'].append(POST_IMAGE)
+        session["favorites"] = users[session["username"]]['favorites']
+
+    favorites = session["favorites"]
+
+    usersFile = open('users.json','w')
+    json.dump(users, usersFile)
+    usersFile.close()
+
+    return render_template('favorite.html', favorites = favorites)
+
+
+
 @app.route("/createUser", methods=['POST'])
 def createUser():
 
@@ -81,7 +110,7 @@ def createUser():
     if POST_USERNAME in users:
         flash("This username exists")
     else:
-        users[POST_USERNAME] = {"password" : POST_PASSWORD}
+        users[POST_USERNAME] = {"password" : POST_PASSWORD , "favorites":[]}
 
         usersFile = open('users.json','w')
         json.dump(users, usersFile)
