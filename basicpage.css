@@ -1,17 +1,20 @@
-body{
-  color:black;
-/*  font-family: 'Shadows Into Light Two'; */
-  font-size:20px;
-  font-style: normal;
-  text-align:center;
-}
-
 h1{
-  color:black; font-family:'Allura', cursive; font-size: 42px
+ color:black; font-family:'Allura', cursive; font-size: 42px
+
+
 }
 
 h2{
-  float: right;
+
+ float: right;
+
+}
+
+body{
+ color:black;
+ font-family: 'Shadows Into Light Two';
+ font-size:20px;
+
 }
 
 p.welcome {
@@ -25,166 +28,129 @@ p.welcome {
 p.normal{
   font-style: oblique;
 }
-
-
 .circle {
-    height: 150;
-    border-radius: 50%;
+   height: 150;
+   border-radius: 50%;
 }
 
 .content {
-    max-width: 500spx;
-    margin: auto;
+   max-width: 500spx;
+   margin: auto;
 }
 
 div.figure {
-  float: left;
-  width: 30%;
-  text-align: center;
-  font-style: italic;
-  font-size: smaller;
-  text-indent: 0;
-  border: thin silver solid;
-  margin: 1.2em;
-  padding: .5em;
+ float: left;
+ width: 30%;
+ text-align: center;
+ font-style: italic;
+ font-size: smaller;
+ text-indent: 0;
+ border: thin silver solid;
+ margin: 1.2em;
+ padding: .5em;
 }
 
 * {
-  box-sizing:border-box;
+ box-sizing:border-box;
 }
 
 .zoom {
-    transition: transform .2s;
+   transition: transform .2s;
 }
 
 .zoom:hover {
-    transform: scale(1.5);
-
+   transform: scale(1.5);
 }
 
-.imageInput{
-  display:none;
-
-}
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+ display: flex;
+ flex-wrap: wrap;
+ padding: 0 4px;
 }
 
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 20%;
-  padding: 0 4px;
+ flex: 20%;
+ padding: 0 4px;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
+ margin-top: 8px;
+ vertical-align: middle;
 
 }
 
 .button {
-    background-color: #3498DB;
-    border: black;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+   background-color: #3498DB;
+   border: black;
+   color: white;
+   padding: 15px 25px;
+   text-align: center;
+   font-size: 16px;
+   cursor: pointer;
 }
 
 .button:hover {
-    background-color: #2980B9;
+   background-color: #2980B9;
 }
 
 
 .btn {
-  border: 2px solid transparent;
-  background: #3498DB;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 25px;
-  padding: 10px 0;
-  text-decoration: none;
-  text-shadow: none;
-  border-radius: 3px;
-  box-shadow: none;
-  transition: 0.25s;
-  display: block;
-  width: 250px;
-  margin: 0 auto;
-  float: left;
+ border: 2px solid transparent;
+ background: #3498DB;
+ color: #ffffff;
+ font-size: 16px;
+ line-height: 25px;
+ padding: 10px 0;
+ text-decoration: none;
+ text-shadow: none;
+ border-radius: 3px;
+ box-shadow: none;
+ transition: 0.25s;
+ display: block;
+ width: 250px;
+ margin: 0 auto;
+ float: left;
 }
 
 .btn:hover {
-  background-color: #2980B9;
+ background-color: #2980B9;
 }
 
 
 #logoutBtn {
-  display: inline-flex !important;
-}
+ display: inline-flex !important;
 
-/*
-.image{
- opacity: 1;
- display: inline-table;
- transition: .5s ease;
-}
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: relative;
-  transform: translate(-20%, -20%);
-  -ms-transform: translate(-20%, -20%);
-  text-align: center;
-}
-.container:hover .image {
-  opacity: 0.8;
-}
-.container:hover .middle {
+ .image{
   opacity: 1;
-}
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-/*  padding: 16px 32px;
-} */
-
-
-
-.image{
- opacity: 1;
- display: block;
- width: 300;
- height: 400;
- transition: .5s ease;
-}
-
-.middle {
+  display: block;
+  width: 300;
+  height: 400;
   transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
+ }
 
-.container:hover .image {
-  opacity: 0.8;
-}
+ .middle {
+   transition: .5s ease;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+ }
 
-.container:hover .middle {
-  opacity: 1;
-}
+ .container:hover .image {
+   opacity: 0.8;
+ }
 
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
+ .container:hover .middle {
+   opacity: 1;
+ }
+
+ .text {
+   background-color: #4CAF50;
+   color: white;
+   font-size: 16px;
+   padding: 16px 32px;
+ }

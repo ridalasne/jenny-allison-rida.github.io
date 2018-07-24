@@ -1,9 +1,11 @@
-head {
-  color:black; font-family:'Almendra', cursive; font-size: 30px
+h2 {
+  font-family:'Allura', cursive;
+  font-size: 55px;
+}
+.works{
 
 }
 
 body {
-
-  color:black; font-family:'Alegreya', cursive; font-size:23px
+  color:black; font-family:'Shadows Into Light Two', cursive; font-size:15px;
 }
